@@ -1,0 +1,13 @@
+# alpha, beta_max.
+1.2
+134
+# R_f0 (one for each variable).
+1.0
+1.0
+1.0
+# For lambda sweep, define lambda_min and lambda_max.
+2.5
+5.5
+# For convergence purposes, define maximum of iterations and tolerance.
+1
+0.0001
