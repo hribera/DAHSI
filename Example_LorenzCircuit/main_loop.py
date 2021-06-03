@@ -120,7 +120,7 @@ while lambd < lambd_max:
         
         # We hard threshold the parameter part of the solution (the last num_params elements).
         for i in range(num_params):
-            if abs(x_jn[i-num_params]) < 0:
+            if abs(x_jn[i-num_params]) < lambd:
                 x_jn[i-num_params] = 0
 
         # We set this solution as the initial condition for the next iteration of IPOPT. 
@@ -132,16 +132,10 @@ while lambd < lambd_max:
         # Write solution in file (at the moment we are only saving the paramter estimate in the file).
         for k in range(num_params):
             f.write("%f " % x_jp[k-num_params])
-        f.write("\n") 
-
-#        for k in range(num_total):
-#            f.write("%f " % x_jp[k])
-#        f.write("\n")         
+        f.write("\n")     
 
         f.close()
     
     # Increase \lambda value.       
     lambd = lambd+0.1
 f.close()    
-
-#os.system('rm arrayJob*')    
