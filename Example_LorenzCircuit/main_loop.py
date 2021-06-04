@@ -79,7 +79,7 @@ nlp.num_option('bound_relax_factor', 0)
 
 # The results.dat file has 3 + num_params columns: \lambda value; \beta value; cost function value; state variables and parameter estimates.
 # Open file where results will be stored. 
-file_name = "D%s_M%s_IC%s_CircuitFig3_MS_V5_500_a1p2.dat" % (num_vars, num_meas, IC) 
+file_name = "D%s_M%s_IC%s_Circuit.dat" % (num_vars, num_meas, IC) 
 file_results = os.path.join("outputfiles",file_name)
 f = open(file_results,"w+")
 

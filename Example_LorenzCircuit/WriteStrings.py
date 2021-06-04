@@ -5,19 +5,6 @@ from sympy import symbols
 import pickle
 import numpy as np
 
-Input1 = np.genfromtxt('File1.txt', comments = '#', dtype = 'str')
-
-# We make sure that parameters that will be used as limits in for loops are integers
-# and that the time step is a float.
-num_vars = int(Input1[0].split(",")[0])
-num_params = int(Input1[0].split(",")[1])
-num_meas = int(Input1[0].split(",")[2])
-dt = float(Input1[0].split(",")[3])
-num_tpoints = int(Input1[0].split(",")[4])
-
-# This is the total number of variables that IPOPT will consider.
-num_total = num_vars*num_tpoints + num_params
-
 file_ObjJacHess = open('ObjJacHess.obj', 'r') 
 
 ObjFunk_Meas_eval = pickle.load(file_ObjJacHess)
@@ -57,7 +44,6 @@ for j in range(3*num_vars+num_params):
     for i in range(3*num_vars+num_params):
         string_Hess_Meas_LessIndent += "        str_HessFunk_Meas[%d,%d] = %s\n" %(j,i,Hessian_Meas[j,i])  
           
-
 ###############################################################################
 
 # Open and read the template file "OneLoopInC_Blank.pyx"

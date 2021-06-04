@@ -2,5 +2,5 @@
 datax
 dataz
 # Data file names.extension
-datax_circuitFig3_V5_500.dat
-dataz_circuitFig3_V5_500.dat
+datax_Circuit.dat
+dataz_Circuit.dat

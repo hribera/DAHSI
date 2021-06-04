@@ -18,13 +18,13 @@ Input3 = np.genfromtxt('File3.txt', comments = '#', dtype = 'str')
 # We make sure that parameters that will be used as limits in for loops are integers
 # and that the time step is a float.
 num_vars = int(Input1[0].split(",")[0])
-#num_params = int(Input1[0].split(",")[1])
+num_params = int(Input1[0].split(",")[1])
 num_meas = int(Input1[0].split(",")[2])
 dt = float(Input1[0].split(",")[3])
 num_tpoints = int(Input1[0].split(",")[4])
 
 # This is the total number of variables that IPOPT will consider.
-#num_total = num_vars*num_tpoints + num_params
+num_total = num_vars*num_tpoints + num_params
 
 # Here we save all the data from the different measured state variables.
 data = np.zeros((num_tpoints,num_meas))
@@ -43,11 +43,8 @@ alpha = float(Input3[0])
 # Number of annealing steps.
 beta_max = int(Input3[1])
 
-# R_{f,0}.
-Rf0 = Input3[2:2+num_vars].astype(np.float)
-
 # First lambda in our sweep.
-lambd_0 = float(Input3[2+num_vars])
+lambd_0 = float(Input3[2])
 
 # Maximum lambda in our sweep.
-lambd_max = float(Input3[2+num_vars+1])
+lambd_max = float(Input3[2+1])
