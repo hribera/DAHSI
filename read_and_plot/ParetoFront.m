@@ -30,7 +30,7 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
     % code to get model structure for each model.
-    load('structures_LorenzCircuit.mat');
+    load('structures_Circuit.mat');
     [num_models, ~] = size(unique_structures);
 
     for jj = 1:num_models
@@ -86,7 +86,8 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
     % number of time segments (including the ones used to perform model selection).
     S = 1106;
     
-    validation_data = 3025:4026;
+    % time series used for selecting the models. we will not use them for
+    % validation.
     affected_time_series = 68:1:90;  
     
     for kk = 1:S
@@ -137,7 +138,8 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    RSS = zeros(1,num_models);
+    % Find the E_av of each model.
+    E_av = zeros(1,num_models);
     
     % model loop
     for jj = 1:num_models        
@@ -182,7 +184,7 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
         end
 
         % calculte \sum E_av.
-        RSS(jj) = sum(sum_squares);
+        E_av(jj) = sum(sum_squares);
     end  
     
     ind_all_models = 1:num_models;
@@ -194,17 +196,17 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
     %% Plot Pareto front 
     % Figure 1(d)
     figure;
-    plot(active_terms(other_level),RSS(other_level),'o',...
+    plot(active_terms(other_level),E_av(other_level),'o',...
         'MarkerSize',30,'MarkerEdgeColor','black','MarkerFaceColor','black');
     hold on
-    plot(active_terms(other_level),RSS(other_level),'o',...
+    plot(active_terms(other_level),E_av(other_level),'o',...
         'MarkerSize',26,'MarkerEdgeColor','none','MarkerFaceColor',[0.4,0.4,0.4]);
     hold on
     for i = 1:length(lowest_level)
-        plot(active_terms(lowest_level(i)),RSS(lowest_level(i)),'o',...
+        plot(active_terms(lowest_level(i)),E_av(lowest_level(i)),'o',...
             'MarkerSize',30,'MarkerEdgeColor','black','MarkerFaceColor','black');
         hold on
-        plot(active_terms(lowest_level(i)),RSS(lowest_level(i)),'o',...
+        plot(active_terms(lowest_level(i)),E_av(lowest_level(i)),'o',...
             'MarkerSize',26,'MarkerEdgeColor','none','MarkerFaceColor',colours(i,:));
         hold on
     end
@@ -222,17 +224,17 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
     axes('Position',[.55 .47 .4 .4])
     box on
 
-    plot(active_terms(ind_all_models),RSS(ind_all_models),'o',...
+    plot(active_terms(ind_all_models),E_av(ind_all_models),'o',...
         'MarkerSize',30,'MarkerEdgeColor','black','MarkerFaceColor','black');
     hold on
-    plot(active_terms(ind_all_models),RSS(ind_all_models),'o',...
+    plot(active_terms(ind_all_models),E_av(ind_all_models),'o',...
         'MarkerSize',26,'MarkerEdgeColor','none','MarkerFaceColor',[0.4,0.4,0.4]);
     hold on
     for i = 1:length(lowest_level)
-        semilogy(active_terms(lowest_level(i)),RSS(lowest_level(i)),'o',...
+        semilogy(active_terms(lowest_level(i)),E_av(lowest_level(i)),'o',...
             'MarkerSize',30,'MarkerEdgeColor','black','MarkerFaceColor','black');
         hold on
-        semilogy(active_terms(lowest_level(i)),RSS(lowest_level(i)),'o',...
+        semilogy(active_terms(lowest_level(i)),E_av(lowest_level(i)),'o',...
             'MarkerSize',26,'MarkerEdgeColor','none','MarkerFaceColor',colours(i,:));
         hold on
     end    
@@ -310,7 +312,9 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
         
     %% Plot time-series comparing all models.
     % Figure 1(f)
-            
+    
+    close all
+    
     % initial point given by kk
     kk = 20;
 
@@ -327,7 +331,7 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
         end
 
         dt = 0.01;
-        t_V5 = 0:dt:3;
+        t_V5 = 0:dt:2;
         num_tpoints = 91;
         
         y0 = ypredicted_x(jj,kk);
@@ -349,7 +353,7 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
 
         xlim([0,t_V5(end)])
 
-        pbaspect([6 .8 1]) 
+        pbaspect([1.66 .25 1]) 
         
         subplot(3,1,2)
         hold on
@@ -361,7 +365,7 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
 
         xlim([0,t_V5(end)])
 
-        pbaspect([6 .8 1]) 
+        pbaspect([1.66 .25 1])
 
         subplot(3,1,3)
         plot(t_V5,X_simz,'-','LineWidth',3,'Color',colours(i,:));        
@@ -376,7 +380,7 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
 
         set(findall(gcf,'-property','FontSize'),'FontSize',30); 
         
-        pbaspect([6 .8 1]) 
+        pbaspect([1.66 .25 1]) 
     end
        
     % Plot error (Figure 1(f))
@@ -394,7 +398,7 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
         end
 
         dt = 0.01;
-        t_V5 = 0:dt:3;
+        t_V5 = 0:dt:2;
         num_tpoints = 91; % 1 Lyapunov time.
                 
         y0 = ypredicted_x(jj,kk);
@@ -417,7 +421,7 @@ function [] = ParetoFront_Manfiolds_Errors_Plot()
 
         xlim([0,t_V5(end)])
         
-        pbaspect([2.5 1 1]) 
+        pbaspect([1.66 1 1]) 
 
         set(findall(gcf,'-property','FontSize'),'FontSize',30); 
     end
