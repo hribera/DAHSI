@@ -1,12 +1,12 @@
 clear all
-close all
 
 load('Variables_Plotting_Circuit.mat')
 
 % number of time series.
 S_ini = 15;
-S_max = S-23;
+S_max = S-length(affected_time_series);
 
+% remove the time-segments that are used to run the DAHSI algorithm.
 all_time_segments = 1:S;
 all_time_segments(affected_time_series) = [];
 
@@ -27,21 +27,24 @@ for s = S_ini:S_max
     for jj = 1:num_models        
         num_params = active_terms(jj);
 
-        % time series loop
+        % time-segment loop
         for kk = 1:s
             y0 = ypredicted_x_picked(jj,kk);
 
             X0 = [X_real_picked{kk}(1,1), y0, X_real_picked{kk}(1,3)];
 
-            sol_model = RK4(@Lorenz_Generic, X0, t_1Ly, parameters_model(jj,:));
+            sol_model = RK4(@GenericModel, X0, t_1Ly, parameters_model(jj,:));
             X_model{jj}{kk}(:,1) = sol_model(:,1);
             X_model{jj}{kk}(:,2) = sol_model(:,2);            
             X_model{jj}{kk}(:,3) = sol_model(:,3);
 
+            % only use 1/4 of Lyapunov time and do not consider the first 4
+            % points as they are used in estmating y_0.
             N_start = 5;
-            N_window = 23-5;
+            N_window = num_tpoints-5;
             t_window = N_start:(N_window+N_start-1);
 
+            % calculate E_av.
             sum_1(kk) = sum((X_real_picked{kk}(t_window,1) - X_model{jj}{kk}(t_window,1)).^2);
             sum_2(kk) = sum((X_real_picked{kk}(t_window,3) - X_model{jj}{kk}(t_window,3)).^2);
 
@@ -51,6 +54,8 @@ for s = S_ini:S_max
         % calculte AIC.
         AIC(jj) = S_real*log(sum(sum_squares)/S_real) + 2*num_params;
         AIC_c(jj) = AIC(jj);
+        
+        % calculate BIC.
         BIC(jj) = S_real*log(sum(sum_squares)/S_real) + num_params*log(S_real);
         BIC_c(jj) = BIC(jj);
     end

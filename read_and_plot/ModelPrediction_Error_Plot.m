@@ -18,7 +18,7 @@ for i = 1:length(lowest_level)
     y0 = ypredicted_x(jj,kk);
     X0 = [X_real{kk}(1,1), y0, X_real{kk}(1,3)];
 
-    sol_model_figure = RK4(@Lorenz_Generic, X0, t_plot, parameters_model(jj,:));
+    sol_model_figure = RK4(@GenericModel, X0, t_plot, parameters_model(jj,:));
     X_simx = sol_model_figure(:,1);
     X_simy = sol_model_figure(:,2);            
     X_simz = sol_model_figure(:,3);
@@ -75,7 +75,7 @@ for i = 1:length(lowest_level)
     y0 = ypredicted_x(jj,kk);
     X0 = [X_real{kk}(1,1), y0, X_real{kk}(1,3)];
 
-    sol_model_figure = RK4(@Lorenz_Generic, X0, t_plot, parameters_model(jj,:));
+    sol_model_figure = RK4(@GenericModel, X0, t_plot, parameters_model(jj,:));
     X_simx = sol_model_figure(:,1);
     X_simy = sol_model_figure(:,2);            
     X_simz = sol_model_figure(:,3);

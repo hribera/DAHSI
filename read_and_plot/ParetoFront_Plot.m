@@ -1,5 +1,4 @@
 clear all
-close all
 
 load('Variables_Plotting_Circuit.mat')
 
@@ -16,20 +15,20 @@ for jj = 1:num_models
             sum_squares(kk) = 0;
         else
             % solve system using jj model.
-            % solve it with the right structure via Lorenz_Generic.
+            % solve it with the right structure via GenericModel.
             % save it in X_modeljj{.}(.,.).
 
             y0 = ypredicted_x(jj,kk);
 
             X0 = [X_real{kk}(1,1), y0, X_real{kk}(1,3)];
 
-            sol_model = RK4(@Lorenz_Generic, X0, t_1Ly, parameters_model(jj,:));
+            sol_model = RK4(@GenericModel, X0, t_1Ly, parameters_model(jj,:));
             X_model{jj}{kk}(:,1) = sol_model(:,1);
             X_model{jj}{kk}(:,2) = sol_model(:,2);            
             X_model{jj}{kk}(:,3) = sol_model(:,3);
 
             N_start = 5;
-            N_window = 23-5;
+            N_window = num_tpoints-5;
             t_window = N_start:(N_window+N_start-1);
 
             sum_1(kk) = sum((X_real{kk}(t_window,1) - X_model{jj}{kk}(t_window,1)).^2);
@@ -97,34 +96,3 @@ xlabel('active terms')
 ylabel('E_{av}')
 
 set(findall(gcf,'-property','FontSize'),'FontSize',26);       
-
-%% Plot attractors from the models on the Pareto front.
-% initial point given by kk
-kk = 5;
-
-t_V5 = 0:0.01:100;
-
-for i = 1:7
-    jj = lowest_level(i);
-
-    y0 = ypredicted_x(jj,kk);
-    X0 = [X_real{kk}(1,1), y0, X_real{kk}(1,3)];
-
-    sol_model_figure = RK4(@Lorenz_Generic, X0, t_V5, parameters_model(jj,:));
-    X_simx = sol_model_figure(:,1);
-    X_simy = sol_model_figure(:,2);            
-    X_simz = sol_model_figure(:,3);
-
-    figure;
-    plot3(X_simx,X_simy,X_simz,'-k','LineWidth',2,'Color',colours(i,:));
-    xlabel('x')
-    ylabel('y')
-    zlabel('z')
-
-    axis square
-    view([45 25])
-
-    set(findall(gcf,'-property','FontSize'),'FontSize',40); 
-end
-
-

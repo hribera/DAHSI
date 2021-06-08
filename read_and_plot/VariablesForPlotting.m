@@ -76,13 +76,15 @@ params_models{25} = [-2.4053  -17.0627  19.9862    1.4595   0.7892  22.6061    0
 % output -> X_real{.}(.,.).
 
 %%% real data.
-fileID = fopen('circuit_x_Fig3.txt','r');
-formatSpec = '%f';
-xcircuit = fscanf(fileID,formatSpec);
+num_datapoints_realdata = 65537;
 
-fileID = fopen('circuit_z_Fig3.txt','r');
-formatSpec = '%f';
-zcircuit = fscanf(fileID,formatSpec);  
+fileID = fopen('circuit_x.txt','r');
+xcircuit = textscan(fileID, '%f', num_datapoints_realdata, 'CommentStyle', '#'); 
+xcircuit = cell2mat(xcircuit);
+
+fileID = fopen('circuit_z.txt','r');
+zcircuit = textscan(fileID, '%f', num_datapoints_realdata, 'CommentStyle', '#'); 
+zcircuit = cell2mat(zcircuit);
 
 % number of time segments (including the ones used to perform model selection).
 S = 1106;

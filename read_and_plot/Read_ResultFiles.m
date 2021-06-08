@@ -41,7 +41,7 @@ function Read_ResultFiles(input_file_extension,num_IC,num_vars,num_meas,...
     for IC = 1:num_IC   
         IC
         %Open the results file and put it in a matrix A.
-        filename = sprintf('D%d_M%d_IC%d_%s.dat', num_vars, num_meas, IC-1,input_file_extension);
+        filename = sprintf('../Example_LorenzSynth/outputfiles/D%d_M%d_IC%d_%s_0p01.dat', num_vars, num_meas, IC-1,input_file_extension);
         delimiterIn = ' ';
         headerlinesIn = 0;
         B = importdata(filename,delimiterIn,headerlinesIn);

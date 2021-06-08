@@ -2,7 +2,7 @@ clear all
 
 load('Variables_Plotting_Circuit.mat')  
 
-%% Plot attractors from the models on the Pareto front.
+% Plot attractors from the models on the Pareto front.
 % initial point given by kk
 kk = 5;
 
@@ -14,7 +14,7 @@ for i = 1:7
     y0 = ypredicted_x(jj,kk);
     X0 = [X_real{kk}(1,1), y0, X_real{kk}(1,3)];
 
-    sol_model_figure = RK4(@Lorenz_Generic, X0, t_manifolds, parameters_model(jj,:));
+    sol_model_figure = RK4(@GenericModel, X0, t_manifolds, parameters_model(jj,:));
     X_simx = sol_model_figure(:,1);
     X_simy = sol_model_figure(:,2);            
     X_simz = sol_model_figure(:,3);
