@@ -33,10 +33,7 @@ for i in range(num_meas):
 #    filename = "%s" % Input2[num_meas+1+i]
     filename = "%s" % Input2[num_meas+i]
     data[:,i] = np.loadtxt(filename)
-
-# We transform it from a matrix of 'num_tpoints' by 'num_meas' to just a vector.  
-dataT = np.reshape(data,num_tpoints*num_meas)
-    
+ 
 # 
 alpha = float(Input3[0])
 
