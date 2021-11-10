@@ -9,7 +9,7 @@ close all
 % 'structures_LorenzSynth.mat' with the unique model structures found.
 
 % We read the result files.
-input_file_extension = 'LorenzSynth';
+input_file_extension = 'LorenzSynth_V5_s0p01_04';
        
 % Relevant values from the problem we have solved using DAHSI.
 num_IC = 100;
@@ -17,7 +17,7 @@ num_vars = 3;
 num_meas = 2;
 num_params = 30;
 beta_input = 256;
-beta_want = 246;
+beta_want = 224;
 lambdini = 0.05;
 lambdend = 1.01;
 lambdstep = 0.05;
