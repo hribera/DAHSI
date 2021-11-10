@@ -2,5 +2,5 @@
 1.1
 256
 # For lambda sweep, define lambda_min and lambda_max.
-0.3
-0.5
+0.05
+1.01
