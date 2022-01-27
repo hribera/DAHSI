@@ -1,0 +1,6 @@
+# Data names.
+datax
+datay
+# Data file names.extension
+datax_colpitts.dat
+datay_colpitts.dat

@@ -1,0 +1,6 @@
+# alpha, beta_max.
+1.1
+145
+# For lambda sweep, define lambda_min and lambda_max.
+0.005
+0.036
