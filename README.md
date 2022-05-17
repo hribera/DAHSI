@@ -37,7 +37,11 @@ You can also test out DAHSI without installing it locally in [podman](https://po
 ### Dependencies
 
 * Python3
-` `
+
+* pip
+```
+sudo apt install python3-pip
+```
 
 * C/C++ compiler
 ```
@@ -47,11 +51,14 @@ sudo apt-get install manpages-dev
 ```
 
 * Fortran libraries
-`sudo apt-get install gfortran`
+```
+sudo apt-get install gfortran
+```
 
 * pkg-config
-`sudo apt-get install pkgconfig`
-
+```
+sudo apt-get install pkgconfig
+```
 
 * Ipopt
 
