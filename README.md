@@ -36,18 +36,32 @@ You can also test out DAHSI without installing it locally in [podman](https://po
 
 ### Dependencies
 
-#### Python 
 * Python3
+` `
+
 * C/C++ compiler
+```
+sudo apt update
+sudo apt install build-essential
+sudo apt-get install manpages-dev
+```
+
+* Fortran libraries
+`sudo apt-get install gfortran`
+
+* pkg-config
+`sudo apt-get install pkgconfig`
+
+
 * Ipopt
-* cython
-* cyipopt
 
-First we need to install the optimiser used in DAHSI, named Ipopt. This optimsier, in turn, needs some dependencies to run. 
+The optimiser used in DAHSI, Ipopt, needs some dependencies to run. 
 
-Let's create a folder named `MainIpopt` and go to said directory `cd MainIpopt/`. In this directory we will install the dependencies that the optimiser Ipopt needs in order to run.
+Let's create a folder named `MainIpopt` were we will install the dependencies that the optimiser needs. First, let's go to said directory `cd MainIpopt/`.
 
-#### 
+* Fast implementation of BLAS and LAPACK.
+`sudo apt-get install libblas-dev liblapack-dev`
+
 
 * AMPL Solver Library (ASL).
 
@@ -89,8 +103,6 @@ make
 make install
 ```
 
-* A fast implementation of BLAS and LAPACK is required by Ipopt.
-
 #### Ipopt
 
 To get, compile and install the latest version of IPOPT we run the following commands:
@@ -106,8 +118,37 @@ make test
 make install
 ```
 
+Provided that no errors were produced in the previous steps, you now have successfully installed Ipopt! 
+
 #### cyipopt
-Provided that no errors were produced in the previous steps, you now have successfully installed Ipopt! You are now ready to run DAHSI on your computer.
+
+First, we need to install the cython package
+```pip install cython```
+
+Now let's download the cyipopt package,
+```
+git clone https://github.com/mechmotum/cyipopt.git
+cd cyipopt/
+```
+
+Check whether the Ipopt exectuable is in your path and discoverable by pkg-config
+
+```
+pkg-config --libs --cflags ipopt
+```
+
+If the command above returns a valid result, the Ipopt exectuable is in your path. Otherwise, you can set the LD_LIBRARY_PATH
+
+```
+export PKG_CONFIG_PATH=/your/path/to/the/folder/where/ipopt.pc/is/
+```
+
+Now you can to build and install cyipopt,
+```
+ python setup.py install
+```
+
+You are now ready to run DAHSI on your computer.
 
 -----
 
