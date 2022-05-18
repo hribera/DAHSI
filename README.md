@@ -65,7 +65,7 @@ sudo apt-get install gfortran
 
 ### pkg-config
 ```
-sudo apt-get install pkgconfig
+sudo apt-get install pkg-config
 ```
 
 ### Ipopt
