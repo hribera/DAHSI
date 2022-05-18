@@ -67,9 +67,10 @@ The optimiser used in DAHSI, Ipopt, needs some dependencies to run.
 
 Let's create a folder named `MainIpopt` were we will install the dependencies that the optimiser needs. First, let's go to said directory `cd MainIpopt/`.
 
-* Fast implementation of BLAS and LAPACK.
-`sudo apt-get install libblas-dev liblapack-dev`
-
+#### Fast implementation of BLAS and LAPACK.
+```
+sudo apt-get install libblas-dev liblapack-dev
+```
 
 #### AMPL Solver Library (ASL).
 
