@@ -30,7 +30,7 @@ DAHSI (Data Assimilation for Hidden Sparse Inference) is a method to perform mod
 
 ## Docker
 
-You can also test out DAHSI without installing it locally in [podman](https://podman.io/) by running the following command in the root directory of this repo:
+You can also test out DAHSI without installing it locally using [Docker](https://www.docker.com/get-started/) by running the following command in the root directory of this repo:
 ```
 
 ```
