@@ -8,6 +8,7 @@ README.md is currently being updated. For the time being, refer to the [Installa
 * [Installation](https://github.com/hribera/DAHSI/edit/master/README.md#installation)
   * [Docker](https://github.com/hribera/DAHSI/edit/master/README.md#docker)
   * [From Source](https://github.com/hribera/DAHSI/edit/master/README.md#from-source)
+    * [git](https://github.com/hribera/DAHSI/edit/master/README.md#git)
     * [Python3](https://github.com/hribera/DAHSI/edit/master/README.md#python3)
     * [pip](https://github.com/hribera/DAHSI/edit/master/README.md#pip)
     * [C/C++ compiler](https://github.com/hribera/DAHSI/edit/master/README.md#c-c++)
@@ -37,7 +38,13 @@ You can also test out DAHSI without installing it locally using [Docker](https:/
 
 ## From source
 
+### git
+```
+sudo apt-get install git
+```
+
 ### Python3
+
 
 ### pip
 ```
