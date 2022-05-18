@@ -153,7 +153,7 @@ export PKG_CONFIG_PATH=/your/path/to/the/folder/where/ipopt.pc/is/
 
 Now you can to build and install cyipopt,
 ```
-sudo python setup.py install
+python setup.py install
 ```
 
 You are now ready to run DAHSI on your computer.
