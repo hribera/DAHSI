@@ -8,14 +8,13 @@ README.md is currently being updated. For the time being, refer to the [Installa
 * [Installation](https://github.com/hribera/DAHSI/edit/master/README.md#installation)
   * [Docker](https://github.com/hribera/DAHSI/edit/master/README.md#docker)
   * [From Source](https://github.com/hribera/DAHSI/edit/master/README.md#from-source)
-    * [Dependencies](https://github.com/hribera/DAHSI/edit/master/README.md#dependencies)
-     * [Python3](https://github.com/hribera/DAHSI/edit/master/README.md#python3)
-     * [pip](https://github.com/hribera/DAHSI/edit/master/README.md#pip)
-     * [C/C++ compiler](https://github.com/hribera/DAHSI/edit/master/README.md#c-c++)
-     * [Fortran libraries](https://github.com/hribera/DAHSI/edit/master/README.md#fortran-libraries)
-     * [pkg-config](https://github.com/hribera/DAHSI/edit/master/README.md#pkg-config)
-     * [Ipopt](https://github.com/hribera/DAHSI/edit/master/README.md#ipopt)
-     * [cyipopt](https://github.com/hribera/DAHSI/edit/master/README.md#cyipopt)
+    * [Python3](https://github.com/hribera/DAHSI/edit/master/README.md#python3)
+    * [pip](https://github.com/hribera/DAHSI/edit/master/README.md#pip)
+    * [C/C++ compiler](https://github.com/hribera/DAHSI/edit/master/README.md#c-c++)
+    * [Fortran libraries](https://github.com/hribera/DAHSI/edit/master/README.md#fortran-libraries)
+    * [pkg-config](https://github.com/hribera/DAHSI/edit/master/README.md#pkg-config)
+    * [Ipopt](https://github.com/hribera/DAHSI/edit/master/README.md#ipopt)
+    * [cyipopt](https://github.com/hribera/DAHSI/edit/master/README.md#cyipopt)
 * [Use DAHSI](https://github.com/hribera/DAHSI/edit/master/README.md#use-dahsi)
   * [Example: Lorenz synthetic data](https://github.com/hribera/DAHSI/edit/master/README.md#example-lorenz-synthetic-data)
 
@@ -38,33 +37,31 @@ You can also test out DAHSI without installing it locally in [podman](https://po
 
 ## From source
 
-### Dependencies
+### Python3
 
-#### Python3
-
-#### pip
+### pip
 ```
 sudo apt install python3-pip
 ```
 
-#### C/C++ compiler
+### C/C++ compiler
 ```
 sudo apt update
 sudo apt install build-essential
 sudo apt-get install manpages-dev
 ```
 
-#### Fortran libraries
+### Fortran libraries
 ```
 sudo apt-get install gfortran
 ```
 
-#### pkg-config
+### pkg-config
 ```
 sudo apt-get install pkgconfig
 ```
 
-#### Ipopt
+### Ipopt
 
 The optimiser used in DAHSI, Ipopt, needs some dependencies to run. 
 
@@ -74,7 +71,7 @@ Let's create a folder named `MainIpopt` were we will install the dependencies th
 `sudo apt-get install libblas-dev liblapack-dev`
 
 
-##### AMPL Solver Library (ASL).
+#### AMPL Solver Library (ASL).
 
 To install ASL, we run the commands
 ```
@@ -86,7 +83,7 @@ make
 make install
 ```
 
-##### Harwell Subroutines Library (HSL). MA27, MA57, HSL_MA77, HSL_MA86, and HSL_MA97. 
+#### Harwell Subroutines Library (HSL). MA27, MA57, HSL_MA77, HSL_MA86, and HSL_MA97. 
 
 Get the HSL routines from [http://hsl.rl.ac.uk/ipopt](http://hsl.rl.ac.uk/ipopt). You can download the HSL Archive or HSL Full. For our code to run, you need to download the HSL Full. Once you have submitted registration form you will recieve an email containing a download link (it takes about one working day).
 
@@ -102,7 +99,7 @@ make
 make install
 ```
 
-##### MUltifrontal Massively Parallel sparse direct Solver (MUMPS). 
+#### MUltifrontal Massively Parallel sparse direct Solver (MUMPS). 
 
 To install MUMPS, we run the commands
 ```
@@ -114,7 +111,7 @@ make
 make install
 ```
 
-##### Ipopt optimiser
+#### Ipopt optimiser
 
 To get, compile and install the latest version of IPOPT we run the following commands:
 
@@ -131,7 +128,7 @@ make install
 
 Provided that no errors were produced in the previous steps, you now have successfully installed Ipopt! 
 
-#### cyipopt
+### cyipopt
 
 First, we need to install the cython package
 ```pip install cython```
