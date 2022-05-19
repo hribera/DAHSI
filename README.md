@@ -35,7 +35,7 @@ You can also test out DAHSI without installing it locally using [Docker](https:/
 docker build --pull --rm -f "Dockerfile" -t dahsi "."
 ```
 
-This will build an image called `dahsi` and it will take a few minutes. Once the image has been created you can run it using the command
+This will build an image called `dahsi` and can take up to 15 minutes. Once the image has been created you can run it using the command
 ```
 docker run -it --rm -v "$PWD:/results" dahsi
 ```
