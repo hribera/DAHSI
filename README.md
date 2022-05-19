@@ -11,7 +11,7 @@ README.md is currently being updated. For the time being, refer to the [Installa
     * [Base utilities](https://github.com/hribera/DAHSI/blob/master/README.md#base-utilities)
     * [Python3](https://github.com/hribera/DAHSI/blob/master/README.md#python3)
     * [pip](https://github.com/hribera/DAHSI/blob/master/README.md#pip)
-    * [C/C++ compiler](https://github.com/hribera/DAHSI/blob/master/README.md#c-c++)
+    * [C/C++ compiler](https://github.com/hribera/DAHSI/blob/master/README.md#cc-compiler)
     * [pkg-config](https://github.com/hribera/DAHSI/blob/master/README.md#pkg-config)
     * [Ipopt](https://github.com/hribera/DAHSI/blob/master/README.md#ipopt)
     * [cyipopt](https://github.com/hribera/DAHSI/blob/master/README.md#cyipopt)
