@@ -33,8 +33,16 @@ DAHSI (Data Assimilation for Hidden Sparse Inference) is a method to perform mod
 
 You can also test out DAHSI without installing it locally using [Docker](https://www.docker.com/get-started/) by running the following command in the root directory of this repo:
 ```
-
+docker build --pull --rm -f "Dockerfile" -t dahsi "."
 ```
+
+This will build an image called `dahsi`. Then you can run the image we have created by running
+```
+docker run -it --rm -v "$PWD:/results" dahsi
+```
+
+This will launch a terminal in which we are ready to [use DAHSI](https://github.com/hribera/DAHSI/edit/master/README.md#use-dahsi).
+
 
 ## From source
 
