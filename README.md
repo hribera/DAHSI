@@ -4,19 +4,19 @@ README.md is currently being updated. For the time being, refer to the [Installa
 
 #### Table of Contents
 
-* [DAHSI](https://github.com/hribera/DAHSI/edit/master/README.md#dahsi)
-* [Installation](https://github.com/hribera/DAHSI/edit/master/README.md#installation)
-  * [Docker](https://github.com/hribera/DAHSI/edit/master/README.md#docker)
-  * [From Source](https://github.com/hribera/DAHSI/edit/master/README.md#from-source)
-    * [Base utilities](https://github.com/hribera/DAHSI/edit/master/README.md#base-utilities)
-    * [Python3](https://github.com/hribera/DAHSI/edit/master/README.md#python3)
-    * [pip](https://github.com/hribera/DAHSI/edit/master/README.md#pip)
-    * [C/C++ compiler](https://github.com/hribera/DAHSI/edit/master/README.md#c-c++)
-    * [pkg-config](https://github.com/hribera/DAHSI/edit/master/README.md#pkg-config)
-    * [Ipopt](https://github.com/hribera/DAHSI/edit/master/README.md#ipopt)
-    * [cyipopt](https://github.com/hribera/DAHSI/edit/master/README.md#cyipopt)
-* [Use DAHSI](https://github.com/hribera/DAHSI/edit/master/README.md#use-dahsi)
-  * [Example: Lorenz synthetic data](https://github.com/hribera/DAHSI/edit/master/README.md#example-lorenz-synthetic-data)
+* [DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#dahsi)
+* [Installation](https://github.com/hribera/DAHSI/blob/master/README.md#installation)
+  * [Docker](https://github.com/hribera/DAHSI/blob/master/README.md#docker)
+  * [From Source](https://github.com/hribera/DAHSI/blob/master/README.md#from-source)
+    * [Base utilities](https://github.com/hribera/DAHSI/blob/master/README.md#base-utilities)
+    * [Python3](https://github.com/hribera/DAHSI/blob/master/README.md#python3)
+    * [pip](https://github.com/hribera/DAHSI/blob/master/README.md#pip)
+    * [C/C++ compiler](https://github.com/hribera/DAHSI/blob/master/README.md#c-c++)
+    * [pkg-config](https://github.com/hribera/DAHSI/blob/master/README.md#pkg-config)
+    * [Ipopt](https://github.com/hribera/DAHSI/blob/master/README.md#ipopt)
+    * [cyipopt](https://github.com/hribera/DAHSI/blob/master/README.md#cyipopt)
+* [Use DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#use-dahsi)
+  * [Example: Lorenz synthetic data](https://github.com/hribera/DAHSI/blob/master/README.md#example-lorenz-synthetic-data)
 
 -----
 
@@ -40,7 +40,7 @@ This will build an image called `dahsi`. Then you can run the image we have crea
 docker run -it --rm -v "$PWD:/results" dahsi
 ```
 
-This will launch a terminal in which we are ready to [use DAHSI](https://github.com/hribera/DAHSI/edit/master/README.md#use-dahsi).
+This will launch a terminal in which we are ready to [use DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#use-dahsi).
 
 ## From source
 
