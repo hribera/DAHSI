@@ -8,11 +8,10 @@ README.md is currently being updated. For the time being, refer to the [Installa
 * [Installation](https://github.com/hribera/DAHSI/edit/master/README.md#installation)
   * [Docker](https://github.com/hribera/DAHSI/edit/master/README.md#docker)
   * [From Source](https://github.com/hribera/DAHSI/edit/master/README.md#from-source)
-    * [git](https://github.com/hribera/DAHSI/edit/master/README.md#git)
+    * [Base utilities](https://github.com/hribera/DAHSI/edit/master/README.md#base-utilities)
     * [Python3](https://github.com/hribera/DAHSI/edit/master/README.md#python3)
     * [pip](https://github.com/hribera/DAHSI/edit/master/README.md#pip)
     * [C/C++ compiler](https://github.com/hribera/DAHSI/edit/master/README.md#c-c++)
-    * [Fortran libraries](https://github.com/hribera/DAHSI/edit/master/README.md#fortran-libraries)
     * [pkg-config](https://github.com/hribera/DAHSI/edit/master/README.md#pkg-config)
     * [Ipopt](https://github.com/hribera/DAHSI/edit/master/README.md#ipopt)
     * [cyipopt](https://github.com/hribera/DAHSI/edit/master/README.md#cyipopt)
@@ -43,16 +42,21 @@ docker run -it --rm -v "$PWD:/results" dahsi
 
 This will launch a terminal in which we are ready to [use DAHSI](https://github.com/hribera/DAHSI/edit/master/README.md#use-dahsi).
 
-
 ## From source
 
-### git
+### Base utilities
 ```
-sudo apt-get install git
+sudo apt-get update
+sudo apt-get install git 
+sudo apt-get install wget
+sudo apt-get install gfortran
 ```
 
 ### Python3
 
+```
+apt-get install -y python3 
+```
 
 ### pip
 ```
@@ -61,14 +65,8 @@ sudo apt install python3-pip
 
 ### C/C++ compiler
 ```
-sudo apt update
 sudo apt install build-essential
 sudo apt-get install manpages-dev
-```
-
-### Fortran libraries
-```
-sudo apt-get install gfortran
 ```
 
 ### pkg-config
