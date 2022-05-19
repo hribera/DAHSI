@@ -40,7 +40,8 @@ This will build an image called `dahsi`. Then you can run the image we have crea
 docker run -it --rm -v "$PWD:/results" dahsi
 ```
 
-This will launch a terminal in which we are ready to [use DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#use-dahsi).
+This will launch a terminal in which we are ready to [run an example using DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#example-lorenz-synthetic-data).
+
 
 ## From source
 
