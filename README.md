@@ -56,7 +56,7 @@ sudo apt-get install gfortran
 ### Python3
 
 ```
-apt-get install -y python3 
+sudo apt-get install -y python3 
 ```
 
 ### pip
