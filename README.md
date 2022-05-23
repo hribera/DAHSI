@@ -6,18 +6,19 @@ README.md is currently being updated. For the time being, refer to the [Installa
 
 * [DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#dahsi)
 * [Installation](https://github.com/hribera/DAHSI/blob/master/README.md#installation)
-  * [Docker](https://github.com/hribera/DAHSI/blob/master/README.md#docker)
-  * [From Source](https://github.com/hribera/DAHSI/blob/master/README.md#from-source)
-    * [Base utilities](https://github.com/hribera/DAHSI/blob/master/README.md#base-utilities)
-    * [Python3](https://github.com/hribera/DAHSI/blob/master/README.md#python3)
-    * [pip](https://github.com/hribera/DAHSI/blob/master/README.md#pip)
-    * [C/C++ compiler](https://github.com/hribera/DAHSI/blob/master/README.md#cc-compiler)
-    * [pkg-config](https://github.com/hribera/DAHSI/blob/master/README.md#pkg-config)
-    * [Ipopt](https://github.com/hribera/DAHSI/blob/master/README.md#ipopt)
-    * [cyipopt](https://github.com/hribera/DAHSI/blob/master/README.md#cyipopt)
+  * [Base utilities](https://github.com/hribera/DAHSI/blob/master/README.md#base-utilities)
+  * [Python3](https://github.com/hribera/DAHSI/blob/master/README.md#python3)
+  * [pip](https://github.com/hribera/DAHSI/blob/master/README.md#pip)
+  * [C/C++ compiler](https://github.com/hribera/DAHSI/blob/master/README.md#cc-compiler)
+  * [pkg-config](https://github.com/hribera/DAHSI/blob/master/README.md#pkg-config)
+  * [Ipopt](https://github.com/hribera/DAHSI/blob/master/README.md#ipopt)
+  * [cyipopt](https://github.com/hribera/DAHSI/blob/master/README.md#cyipopt)
 * [Use DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#use-dahsi)
-  * [Example: Lorenz synthetic data](https://github.com/hribera/DAHSI/blob/master/README.md#example-lorenz-synthetic-data)
+  * [Example: Lorenz synthetic data](https://github.com/hribera/DAHSI/blob/master/README.md#example-with-jupyter-notebook)
 
+<!--   * [Docker](https://github.com/hribera/DAHSI/blob/master/README.md#docker)
+  * [From Source](https://github.com/hribera/DAHSI/blob/master/README.md#from-source) -->
+  
 -----
 
 # DAHSI
@@ -28,7 +29,7 @@ DAHSI (Data Assimilation for Hidden Sparse Inference) is a method to perform mod
 
 # Installation
 
-## Docker
+<!-- ## Docker
 
 You can also test out DAHSI without installing it locally using [Docker](https://www.docker.com/get-started/) by running the following command in the root directory of this repo:
 ```
@@ -42,10 +43,9 @@ docker run -it --rm -v "$PWD:/results" dahsi
 
 This will launch a terminal in which we are ready to [run an example using DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#example-lorenz-synthetic-data).
 
+## From source -->
 
-## From source
-
-### Base utilities
+## Base utilities
 ```
 sudo apt-get update
 sudo apt-get install git 
@@ -53,38 +53,38 @@ sudo apt-get install wget
 sudo apt-get install gfortran
 ```
 
-### Python3
+## Python3
 
 ```
 sudo apt-get install -y python3 
 ```
 
-### pip
+## pip
 ```
 sudo apt install python3-pip
 ```
 
-### C/C++ compiler
+## C/C++ compiler
 ```
 sudo apt install build-essential
 sudo apt-get install manpages-dev
 ```
 
-### pkg-config
+## pkg-config
 ```
 sudo apt-get install pkg-config
 ```
 
-### Ipopt
+## Ipopt
 
 The optimiser used in DAHSI, Ipopt, needs some dependencies to run. Let's create a folder named `MainIpopt` were we will install the dependencies that the optimiser needs. First, let's go to said directory `cd MainIpopt/`.
 
-#### Fast implementation of BLAS and LAPACK.
+### Fast implementation of BLAS and LAPACK.
 ```
 sudo apt-get install libblas-dev liblapack-dev
 ```
 
-#### AMPL Solver Library (ASL).
+### AMPL Solver Library (ASL).
 
 To install ASL, we run the commands
 ```
@@ -96,7 +96,7 @@ make
 make install
 ```
 
-#### Harwell Subroutines Library (HSL). MA27, MA57, HSL_MA77, HSL_MA86, and HSL_MA97. 
+### Harwell Subroutines Library (HSL). MA27, MA57, HSL_MA77, HSL_MA86, and HSL_MA97. 
 
 Get the HSL routines from [http://hsl.rl.ac.uk/ipopt](http://hsl.rl.ac.uk/ipopt). You can download the HSL Archive or HSL Full. For our code to run, you need to download the HSL Full. Once you have submitted registration form you will recieve an email containing a download link (it takes about one working day).
 
@@ -112,7 +112,7 @@ make
 make install
 ```
 
-#### MUltifrontal Massively Parallel sparse direct Solver (MUMPS). 
+### MUltifrontal Massively Parallel sparse direct Solver (MUMPS). 
 
 To install MUMPS, we run the commands
 ```
@@ -124,7 +124,7 @@ make
 make install
 ```
 
-#### Ipopt optimiser
+### Ipopt optimiser
 
 To get, compile and install the latest version of IPOPT we run the following commands:
 
@@ -141,7 +141,7 @@ make install
 
 Provided that no errors were produced in the previous steps, you now have successfully installed Ipopt! 
 
-### cyipopt
+## cyipopt
 
 First, we need to install the cython package
 ```pip install cython```
@@ -180,13 +180,9 @@ First, download the latest version of DAHSI
 git clone https://github.com/hribera/DAHSI.git
 ```
 
-### Example: Lorenz synthetic data
+### Example with Jupyter Notebook
 
-Go to the `Example_LorenzSynth` folder and run
-```
-python compile.py
-python main_loop.py 999
-```
+Go to the `Example_JupyterNotebook` folder.
 
 
 
