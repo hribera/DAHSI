@@ -9,6 +9,7 @@ README.md is currently being updated. For the time being, refer to the [Installa
   * [Base utilities](https://github.com/hribera/DAHSI/blob/master/README.md#base-utilities)
   * [Python3](https://github.com/hribera/DAHSI/blob/master/README.md#python3)
   * [pip](https://github.com/hribera/DAHSI/blob/master/README.md#pip)
+  * [Python libraries](https://github.com/hribera/DAHSI/blob/master/README.md#python-libraries)
   * [C/C++ compiler](https://github.com/hribera/DAHSI/blob/master/README.md#cc-compiler)
   * [pkg-config](https://github.com/hribera/DAHSI/blob/master/README.md#pkg-config)
   * [Ipopt](https://github.com/hribera/DAHSI/blob/master/README.md#ipopt)
@@ -64,6 +65,12 @@ sudo apt-get install -y python3
 sudo apt install python3-pip
 ```
 
+## Python libraries
+
+To make sure that you are running the same version of the libraries used, we provide a file with all the requirements. You can install that in a virtual environment so it does not affect your current Python set up.
+```
+pip3 install -r /DAHSI/requirements.txt
+```
 ## C/C++ compiler
 ```
 sudo apt install build-essential
