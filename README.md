@@ -69,7 +69,7 @@ sudo apt install python3-pip
 
 To make sure that you are running the same version of the libraries used, we provide a file with all the requirements. You can install that in a virtual environment so it does not affect your current Python set up.
 ```
-pip3 install -r /DAHSI/requirements.txt
+pip3 install -r /requirements.txt
 ```
 ## C/C++ compiler
 ```
