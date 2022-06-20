@@ -180,6 +180,8 @@ You are now ready to run DAHSI on your computer.
 
 -----
 
+⚠️ Files needed for the Jupyter Notebook part are not yet on the git repo.
+
 ## Use DAHSI
 
 First, download the latest version of DAHSI
@@ -189,7 +191,7 @@ git clone https://github.com/hribera/DAHSI.git
 
 ### Example with Jupyter Notebook
 
-Go to the `Example_JupyterNotebook` folder.
+Go to the `Example_Notebook` folder and open the notebook named Lorenz_Walkthrough. 
 
 
 
