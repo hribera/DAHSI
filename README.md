@@ -14,8 +14,7 @@
   * [pkg-config](https://github.com/hribera/DAHSI/blob/master/README.md#pkg-config)
   * [Ipopt](https://github.com/hribera/DAHSI/blob/master/README.md#ipopt)
   * [cyipopt](https://github.com/hribera/DAHSI/blob/master/README.md#cyipopt)
-* [Use DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#use-dahsi)
-  * [Example: Lorenz synthetic data](https://github.com/hribera/DAHSI/blob/master/README.md#example-with-jupyter-notebook)
+* [Explore DAHSI through a Jupyter Notebook example](https://github.com/hribera/DAHSI/blob/master/README.md#explore-dahsi-through-a-jupyter-notebook-example)
 
 <!--   * [Docker](https://github.com/hribera/DAHSI/blob/master/README.md#docker)
   * [From Source](https://github.com/hribera/DAHSI/blob/master/README.md#from-source) -->
@@ -29,6 +28,13 @@ DAHSI (Data Assimilation for Hidden Sparse Inference) is a method to perform mod
 -----
 
 # Installation
+
+First, download the latest version of DAHSI
+```
+git clone https://github.com/hribera/DAHSI.git
+```
+
+We now will install all necessary dependencies for DAHSI to be able to run. The following installations steps were executed on Ubuntu 20.04 and Python3.9.7. For other versions or systems, you might need to modify some of the steps. 
 
 <!-- ## Docker
 
@@ -67,7 +73,7 @@ sudo apt install python3-pip
 
 ## Python libraries
 
-To make sure that you are running the same version of the libraries used, we provide a file with all the requirements. You can install that in a virtual environment so it does not affect your current Python set up.
+To make sure that you are running the same version of the libraries used, we provide a file with all the requirements (`requirements.txt` in the DAHSI repository folder). You can install them in a virtual environment so it does not affect your current Python set up.
 ```
 pip3 install -r /requirements.txt
 ```
@@ -84,7 +90,7 @@ sudo apt-get install pkg-config
 
 ## Ipopt
 
-The optimiser used in DAHSI, Ipopt, needs some dependencies to run. Let's create a folder named `MainIpopt` were we will install the dependencies that the optimiser needs. First, let's go to said directory `cd MainIpopt/`.
+The optimiser used in DAHSI, Ipopt, needs some dependencies to run. Let's create a folder named `MainIpopt` were we will install the dependencies that the optimiser needs. The folder `MainIpopt` can be created anywhere on your computer. Now, let's go to said directory `cd MainIpopt/`.
 
 ### Fast implementation of BLAS and LAPACK.
 ```
@@ -93,7 +99,7 @@ sudo apt-get install libblas-dev liblapack-dev
 
 ### AMPL Solver Library (ASL).
 
-To install ASL, we run the commands
+Go to the folder `MainIpopt`. To install ASL, we run the commands
 ```
 git clone https://github.com/coin-or-tools/ThirdParty-ASL.git
 cd ThirdParty-ASL
@@ -105,7 +111,9 @@ make install
 
 ### Harwell Subroutines Library (HSL). MA27, MA57, HSL_MA77, HSL_MA86, and HSL_MA97. 
 
-Get the HSL routines from [http://hsl.rl.ac.uk/ipopt](http://hsl.rl.ac.uk/ipopt). You can download the HSL Archive or HSL Full. For our code to run, you need to download the HSL Full. Once you have submitted registration form you will recieve an email containing a download link (it takes about one working day).
+Get the HSL routines from [http://hsl.rl.ac.uk/ipopt](http://hsl.rl.ac.uk/ipopt). You can download the HSL Archive or HSL Full. For our code to run, you need to download the HSL Full. Once you have submitted registration form you will recieve an email containing a download link (it takes about one working day). 
+
+Go to the folder `MainIpopt` and run
 
 ```
 git clone https://github.com/coin-or-tools/ThirdParty-HSL.git
@@ -121,7 +129,7 @@ make install
 
 ### MUltifrontal Massively Parallel sparse direct Solver (MUMPS). 
 
-To install MUMPS, we run the commands
+Go to the folder `MainIpopt`. To install MUMPS, we run the commands
 ```
 git clone https://github.com/coin-or-tools/ThirdParty-Mumps.git
 cd ThirdParty-Mumps
@@ -133,7 +141,7 @@ make install
 
 ### Ipopt optimiser
 
-To get, compile and install the latest version of IPOPT we run the following commands:
+Go to the folder `MainIpopt`. To get, compile and install the latest version of IPOPT we run the following commands:
 
 ```
 git clone https://github.com/coin-or/Ipopt.git
@@ -153,7 +161,7 @@ Provided that no errors were produced in the previous steps, you now have succes
 First, we need to install the cython package
 ```pip install cython```
 
-Now let's download the cyipopt package,
+Go to the folder `MainIpopt`. Now let's download the cyipopt package,
 ```
 git clone https://github.com/mechmotum/cyipopt.git
 cd cyipopt/
@@ -182,14 +190,7 @@ You are now ready to run DAHSI on your computer.
 
 ⚠️ Files needed for the Jupyter Notebook part are not yet on the git repo.
 
-## Use DAHSI
-
-First, download the latest version of DAHSI
-```
-git clone https://github.com/hribera/DAHSI.git
-```
-
-### Example with Jupyter Notebook
+## Explore DAHSI through a Jupyter Notebook example
 
 Go to the `Example_Notebook` folder and open the notebook named Lorenz_Walkthrough. 
 
