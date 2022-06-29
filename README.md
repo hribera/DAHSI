@@ -90,7 +90,7 @@ sudo apt-get install pkg-config
 
 ## Ipopt
 
-The optimiser used in DAHSI, Ipopt, needs some dependencies to run. Let's create a folder named `MainIpopt` were we will install the dependencies that the optimiser needs. The folder `MainIpopt` can be created anywhere on your computer. Now, let's go to said directory `cd MainIpopt/`.
+The optimiser used in DAHSI, Ipopt, needs some dependencies to run. Let's create a folder named `MainIpopt` were we will install the dependencies that the optimiser needs. The folder `MainIpopt` can be created anywhere on your computer. Now, go to the directory we just created `MainIpopt`.
 
 ### Fast implementation of BLAS and LAPACK.
 ```
@@ -99,7 +99,7 @@ sudo apt-get install libblas-dev liblapack-dev
 
 ### AMPL Solver Library (ASL).
 
-Go to the folder `MainIpopt`. To install ASL, we run the commands
+Make sure you are in the folder `MainIpopt`. To install ASL, we run the commands
 ```
 git clone https://github.com/coin-or-tools/ThirdParty-ASL.git
 cd ThirdParty-ASL
