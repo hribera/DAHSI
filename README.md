@@ -119,7 +119,7 @@ Go to the folder `MainIpopt` and run
 git clone https://github.com/coin-or-tools/ThirdParty-HSL.git
 cd ThirdParty-HSL
 ```
-In this folder, unpack the HSL routines and rename it so the directory is `coinhsl` instead of `coinhsl-x.y.z`. Then, we can install HSL by running the commands
+In this folder (`ThirdParty-HSL`), unpack the HSL routines and rename it so the directory is `coinhsl` instead of `coinhsl-x.y.z`. Then, we can install HSL by running the commands
 
 ```
 ./configure
