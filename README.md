@@ -114,8 +114,6 @@ make install
 
 ### Harwell Subroutines Library (HSL). MA27, MA57, HSL_MA77, HSL_MA86, and HSL_MA97. 
 
-Get the HSL routines from [http://hsl.rl.ac.uk/ipopt](http://hsl.rl.ac.uk/ipopt). You should download the Coin-HSL Full. Once you have submitted registration form you will recieve an email containing a download link (it takes about one working day). 
-
 Go to the folder `MainIpopt` and run
 
 ```
