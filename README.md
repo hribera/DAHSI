@@ -105,6 +105,7 @@ git clone https://github.com/coin-or-tools/ThirdParty-ASL.git
 cd ThirdParty-ASL
 ./get.ASL
 ./configure
+make clean
 make
 make install
 ```
@@ -123,6 +124,7 @@ In this folder (`ThirdParty-HSL`), unpack the HSL routines and rename it so the 
 
 ```
 ./configure
+make clean
 make
 make install
 ```
@@ -135,6 +137,7 @@ git clone https://github.com/coin-or-tools/ThirdParty-Mumps.git
 cd ThirdParty-Mumps
 ./get.Mumps
 ./configure
+make clean
 make
 make install
 ```
@@ -151,6 +154,7 @@ cd Ipopt
 mkdir build
 cd build/
 ../configure
+make clean
 make
 make test
 make install
@@ -190,11 +194,9 @@ You are now ready to run DAHSI on your computer.
 
 -----
 
-⚠️ Files needed for the Jupyter Notebook part are not yet on the git repo.
-
 ## Explore DAHSI through a Jupyter Notebook example
 
-Go to the `Example_Notebook` folder and open the notebook named Lorenz_Walkthrough. 
+Go to the `Example_Notebook` folder and open the notebook named `Lorenz_Walkthrough.ipynb`. 
 
 
 
