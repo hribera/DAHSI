@@ -29,7 +29,9 @@ DAHSI (Data Assimilation for Hidden Sparse Inference) is a method to perform mod
 
 # Installation
 
-First, download the latest version of DAHSI
+⚠️ ⏳ To be able to complete the installation, you will need to get the HSL routines from http://hsl.rl.ac.uk/ipopt. You should download the Coin-HSL Full. Once you have submitted registration form you will receive an email containing a download link (it takes about one working day).
+
+Once you are ready to start, let's download the latest version of DAHSI
 ```
 git clone https://github.com/hribera/DAHSI.git
 ```
