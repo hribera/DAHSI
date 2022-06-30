@@ -1,0 +1,8 @@
+# Data names.
+datax
+datay
+dataz
+# Data file names.extension
+datax_Lorenz.dat
+datay_Lorenz.dat
+dataz_Lorenz.dat
