@@ -138,6 +138,8 @@ cd ThirdParty-Mumps
 make
 make install
 ```
+⚠️ If during the installation there are some warning message, do not worry, that's normal.
+
 
 ### Ipopt optimiser
 
