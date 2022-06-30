@@ -5,7 +5,6 @@
 #### Table of Contents
 
 * [DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#dahsi)
-* [DAHSI](https://github.com/hribera/DAHSI#dahsi)
 * [Installation](https://github.com/hribera/DAHSI/blob/master/README.md#installation)
   * [Base utilities](https://github.com/hribera/DAHSI/blob/master/README.md#base-utilities)
   * [Python3](https://github.com/hribera/DAHSI/blob/master/README.md#python3)
@@ -16,7 +15,6 @@
   * [Ipopt](https://github.com/hribera/DAHSI/blob/master/README.md#ipopt)
   * [cyipopt](https://github.com/hribera/DAHSI/blob/master/README.md#cyipopt)
 * [Explore DAHSI through a Jupyter Notebook example](https://github.com/hribera/DAHSI//blob/master/README.md#explore-dahsi-through-a-jupyter-notebook-example)
-
 <!--   * [Docker](https://github.com/hribera/DAHSI/blob/master/README.md#docker)
   * [From Source](https://github.com/hribera/DAHSI/blob/master/README.md#from-source) -->
   
