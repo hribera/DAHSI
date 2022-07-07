@@ -7,11 +7,6 @@
 * [DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#dahsi)
 * [Installation](https://github.com/hribera/DAHSI/blob/master/README.md#installation)
   * [Base utilities](https://github.com/hribera/DAHSI/blob/master/README.md#base-utilities)
-  * [Python3](https://github.com/hribera/DAHSI/blob/master/README.md#python3)
-  * [pip](https://github.com/hribera/DAHSI/blob/master/README.md#pip)
-  * [Python libraries](https://github.com/hribera/DAHSI/blob/master/README.md#python-libraries)
-  * [C/C++ compiler](https://github.com/hribera/DAHSI/blob/master/README.md#cc-compiler)
-  * [pkg-config](https://github.com/hribera/DAHSI/blob/master/README.md#pkg-config)
   * [Ipopt](https://github.com/hribera/DAHSI/blob/master/README.md#ipopt)
   * [cyipopt](https://github.com/hribera/DAHSI/blob/master/README.md#cyipopt)
 * [Explore DAHSI through a Jupyter Notebook example](https://github.com/hribera/DAHSI/blob/master/README.md#explore-dahsi-through-a-jupyter-notebook-example)
@@ -54,39 +49,29 @@ This will launch a terminal in which we are ready to [run an example using DAHSI
 ## From source -->
 
 ## Base utilities
+
+We first will need to install some base utilities to be able to install DAHSI in our computer. To install these, run the following commands:
 ```
 sudo apt-get update
 sudo apt-get install git 
 sudo apt-get install wget
 sudo apt-get install gfortran
-```
 
-## Python3
-
-```
 sudo apt-get install -y python3 
-```
 
-## pip
-```
 sudo apt install python3-pip
+
+sudo apt install build-essential
+sudo apt-get install manpages-dev
+
+sudo apt-get install pkg-config
 ```
 
-## Python libraries
+### Python libraries
 
 To make sure that you are running the same version of the libraries used, we provide a file with all the requirements (`requirements.txt`) in the DAHSI repository folder). You can install them in a virtual environment so it does not affect your current Python set up.
 ```
 pip3 install -r /requirements.txt
-```
-## C/C++ compiler
-```
-sudo apt install build-essential
-sudo apt-get install manpages-dev
-```
-
-## pkg-config
-```
-sudo apt-get install pkg-config
 ```
 
 ## Ipopt
