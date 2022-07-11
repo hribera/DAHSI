@@ -3,7 +3,7 @@
 ###############################################################################
 
 # Basic standard things to import.
-import pyipopt
+import cyipopt
 import numpy as np
 import sympy as sym
 import sys
