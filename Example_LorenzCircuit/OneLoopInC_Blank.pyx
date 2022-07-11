@@ -6,11 +6,11 @@ from libc.stdlib cimport malloc, free
 
 from header import *
 
-from PyIpopt_Funks import *
+#from PyIpopt_Funks import *
 
 import time
 
-file_ObjJacHess = open('ObjJacHess.obj', 'r') 
+file_ObjJacHess = open('ObjJacHess.obj', 'rb')
 
 ObjFunk_Meas_eval = pickle.load(file_ObjJacHess)
 ObjFunk_Model_eval = pickle.load(file_ObjJacHess)

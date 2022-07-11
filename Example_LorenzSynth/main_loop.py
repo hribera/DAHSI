@@ -1,7 +1,5 @@
 from header import *
 
-from PyIpopt_Funks import *
-
 import time
 
 import pickle

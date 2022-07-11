@@ -6,7 +6,7 @@ from libc.stdlib cimport malloc, free
 
 from header import *
 
-from PyIpopt_Funks import *
+#from PyIpopt_Funks import *
 
 import time
 
