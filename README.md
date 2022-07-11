@@ -1,7 +1,3 @@
-⚠️ README.md is currently being updated. For the time being, refer to the [Installation and Running Guide](DAHSI_Installation_Running_Guide.pdf)
-
------
-
 #### Table of Contents
 
 * [DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#dahsi)
