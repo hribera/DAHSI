@@ -5,7 +5,7 @@
   * [Base utilities](https://github.com/hribera/DAHSI/blob/master/README.md#base-utilities)
   * [Ipopt](https://github.com/hribera/DAHSI/blob/master/README.md#ipopt)
   * [cyipopt](https://github.com/hribera/DAHSI/blob/master/README.md#cyipopt)
-* [Explore DAHSI through a Jupyter Notebook example](https://github.com/hribera/DAHSI/blob/master/README.md#run-dahsi)
+* [Run DAHSI](https://github.com/hribera/DAHSI/blob/master/README.md#run-dahsi)
 <!--   * [Docker](https://github.com/hribera/DAHSI/blob/master/README.md#docker)
   * [From Source](https://github.com/hribera/DAHSI/blob/master/README.md#from-source) -->
   
