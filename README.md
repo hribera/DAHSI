@@ -67,7 +67,7 @@ sudo apt-get install pkg-config
 
 To make sure that you are running the same version of the libraries used, we provide a file with all the requirements (`requirements.txt`) in the DAHSI repository folder). You can install them in a virtual environment so it does not affect your current Python set up.
 ```
-pip3 install -r /requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Ipopt
