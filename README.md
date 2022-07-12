@@ -5,7 +5,7 @@
   * [Base utilities](https://github.com/hribera/DAHSI/blob/master/README.md#base-utilities)
   * [Ipopt](https://github.com/hribera/DAHSI/blob/master/README.md#ipopt)
   * [cyipopt](https://github.com/hribera/DAHSI/blob/master/README.md#cyipopt)
-* [Explore DAHSI through a Jupyter Notebook example](https://github.com/hribera/DAHSI/blob/master/README.md#explore-dahsi-through-a-jupyter-notebook-example)
+* [Explore DAHSI through a Jupyter Notebook example](https://github.com/hribera/DAHSI/blob/master/README.md#run-dahsi)
 <!--   * [Docker](https://github.com/hribera/DAHSI/blob/master/README.md#docker)
   * [From Source](https://github.com/hribera/DAHSI/blob/master/README.md#from-source) -->
   
@@ -174,9 +174,23 @@ You are now ready to run DAHSI on your computer.
 
 -----
 
-## Explore DAHSI through a Jupyter Notebook example
+## Run DAHSI 
+
+### Through a Jupyter Notebook example
 
 Go to the `Example_Notebook` folder and open the notebook named `Lorenz_Walkthrough.ipynb`. 
 
+### Examples from the paper
+
+To run directly the examples that can be found in the <a href="https://doi.org/10.1063/5.0066066">paper</a>, go to one of the example folders and run
+```
+python compile.py 
+```
+
+Now you can run the algorithm
+```
+python main_loop.py taskID
+```
+where `taskID` is a non-negative integer. 
 
 
