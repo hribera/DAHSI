@@ -74,6 +74,17 @@ pip3 install -r requirements.txt
 
 The optimiser used in DAHSI, Ipopt, needs some dependencies to run. Let's create a folder named `MainIpopt` were we will install the dependencies that the optimiser needs. The folder `MainIpopt` can be created anywhere on your computer. Now, go to the directory we just created `MainIpopt`.
 
+The final folder structure will be
+* 📂 MainIpopt
+  * 📂 ThirdParty-ASL
+  * 📂ThirdParty-HSL
+    * 📂 coinhsl
+  * 📂 ThirdParty-Mumps
+  * 📂 Ipopt
+  * 📂 cyipopt
+
+Make sure to refer to this structure while installing the dependencies.
+
 ### Fast implementation of BLAS and LAPACK.
 ```
 sudo apt-get install libblas-dev liblapack-dev
