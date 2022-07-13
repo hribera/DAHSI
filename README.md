@@ -77,7 +77,7 @@ The optimiser used in DAHSI, Ipopt, needs some dependencies to run. Let's create
 The final folder structure will be
 * 📂 MainIpopt
   * 📂 ThirdParty-ASL
-  * 📂ThirdParty-HSL
+  * 📂 ThirdParty-HSL
     * 📂 coinhsl
   * 📂 ThirdParty-Mumps
   * 📂 Ipopt
